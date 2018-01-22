@@ -1,0 +1,14 @@
+doctype html
+html
+	head
+		title= title
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		link(href='./styles.css', rel='stylesheet')
+	body
+		div(id="main")
+		script(src="./js/vendor.bundle.js")
+		script(src="./js/app.bundle.js")
+		script(src="./js/styles.bundle.js")
+		script(type="text/javascript").
+			window.APIuri = '#{apiURL}';
+			window.initApp();

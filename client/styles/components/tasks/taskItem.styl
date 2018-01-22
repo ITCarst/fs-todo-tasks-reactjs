@@ -1,0 +1,76 @@
+@import "../../helpers/variables"
+@import "../../helpers/mixins"
+
+.task-item
+	flexbox(flex)
+	border-top 1px dotted #b7bfc6 
+	max-height 50px
+	overflow hidden
+	justify(space-around)
+	flex-direction row
+	flex-flow row wrap
+	padding 7px 0
+	&.show_descr
+		max-height 120px
+		margin-bottom 10px
+
+
+.title_holder,
+.description_holder
+	flexbox(flex)
+	margin-bottom 15px
+	-webkit-transition-property background, border, box-shadow, color
+	transition-property background, border, box-shadow, color
+
+
+.icon_label
+	div
+		border-radius(50%)
+		border 1px solid #b7bfc6
+		width 20px
+		height 20px
+		padding-top 2px
+		&:hover
+			border-color #32c1ff
+
+.icon_label,
+.task_edit,
+.task_delete
+	cursor pointer
+	text-align center
+	margin-left 10px
+
+.icon_label
+	.title_icon
+		width 12px
+		height 12px
+.task_title
+	flex(2)
+	margin-left 10px
+
+.task_edit,
+.close_icon,
+.task_delete
+	span
+		inlineBlock()
+		background url("../assets/edit_ico.svg") no-repeat top left
+		background-size 90%
+		fill #32c1ff
+		display inline-block
+		cursor pointer
+		margin-top 5px
+		&:hover
+			background-image url("../assets/edit_ico_hover.svg")
+.close_icon,
+.task_delete	
+	span
+		background url("../assets/delete_ico.svg") no-repeat top left
+		background-size 100%
+		&:hover
+			background-image url("../assets/delete_ico_hover.svg")
+
+@media (max-width: 500px)
+	.task_date
+		flex(1 0 20%)
+	.task_title
+		flex(1 0 50%)

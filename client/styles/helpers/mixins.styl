@@ -1,0 +1,44 @@
+inlineBlock() {
+    zoom 1
+    display inline
+    display -moz-inline-stack
+    display inline-block
+}
+
+// height and line-height
+h-lh(val) {
+    height val
+    line-height val
+}
+
+flexbox(value)
+    if value == inline-flex
+        display -webkit-inline-flex
+        display -ms-inline-flexbox
+        display inline-flex
+    else if value == flex
+        display -webkit-flex
+        display -ms-flexbox
+        display flex
+
+flex(value)
+    -webkit-flex value
+    -ms-flex value
+    flex value
+
+flex-flow(value...)
+    -webkit-flex-flow value
+    -ms-flex-flow value
+    flex-flow value 
+
+justify(value)
+    -webkit-justify-content value
+    -ms-flex-pack value
+    justify-content value
+
+border-radius(val)
+    -webkit-border-radius val
+    -moz-border-radius val
+    -ms-border-radius val
+    -o-border-radius val
+    border-radius val

@@ -1,0 +1,7 @@
+--compilers js:babel-register
+--recursive 
+--require babel-polyfill 
+--compilers js:babel-register
+--ui bdd
+--reporter dot
+--require ./test/mocha.setup.js

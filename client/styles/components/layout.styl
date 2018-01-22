@@ -1,0 +1,65 @@
+@import "../helpers/variables"
+@import "../helpers/mixins"
+
+.app-root
+	min-height 100%
+	max-width 1600px 
+	position relative
+	margin 0 auto
+
+.content-wrapper
+	width 100%
+	position relative
+	display flex
+	flex-flow row wrap
+	&.error 
+		text-align center
+		color red
+		font-size 14px
+		padding 20px
+
+.dashboard
+	flex 1
+	height 100%
+	flex-basis 80%
+
+input, textarea
+	border 1px solid #d5dce0
+	width 50%
+	font-family "Helvetica Neue" ,Helvetica, Arial,sans-serif
+	-webkit-transition-property background, border, box-shadow, color
+	transition-property background, border, box-shadow, color
+
+input::placeholder,
+textarea::placedholder,
+input::::-webkit-input-placeholder,
+textarea::::-webkit-input-placeholder
+	color #848f99
+
+button
+	border none
+	background none
+	outline none
+	display block
+	color #14aaf5
+	fill #14aaf5
+	border none
+	border 1px solid #14aaf5
+	padding 5px 10px
+	text-align center
+	display inline-block
+	font-size 14px
+	border-radius(5px)
+	cursor pointer
+	transition-duration .2s
+	-webkit-transition-property background, border, box-shadow, color
+	transition-property background, border, box-shadow, color
+	&:hover
+		box-shadow 0 0 0 3px #32c1ff
+		border-color #fff
+
+footer
+	text-align center
+	margin-top 30px
+	color rgba(64,94,139,0.5)
+	font-size 14px
